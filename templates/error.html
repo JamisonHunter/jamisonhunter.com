@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ error|default('An unexpected error occurred.') }}">
+    <meta name="author" content="Jamison Hunter">
+    <title>Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>An Error Occurred.</h1>
+        <p>{{ error }}</p>
+    </header>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description|default('I make things of varying quality.') }}">
+    <meta name="author" content="Jamison Hunter">
+    <title>{{ title|safe }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/"><h1>Jamison's Projects</h1></a>
+        <p>I make things of varying quality.</p>
+    </header>
+    <hr>
+    <div>
+        <nav>
+            <h2>Archive</h2>
+            <h3>2025</h3>
+            <ul>
+                <!-- Create new blog post.-->
+                <!-- Add link to archive. -->
+                <li><a href="/software-that-i-use-regularly">Software That I Use Regularly</a></li>
+            </ul>
+        </nav>
+        <article>{{ text|safe }}</article>
+    </div>
+    <footer>
+        <p><i>This website falls under a GNU General Public License.</i></p>
+    </footer>
+</body>
+</html>

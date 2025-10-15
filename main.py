@@ -7,7 +7,7 @@ def parse_markdown(file_path):
         text = f.read()
         first_line = text.split('\n', 1)[0]
         title = first_line.lstrip('# ').strip()
-    html_content = markdown.markdown(text, extensions=['fenced_code', 'codehilite'])
+    html_content = markdown.markdown(text, extensions=['fenced_code'])
     return html_content, title
 
 def html_to_description(html, max_chars=160):

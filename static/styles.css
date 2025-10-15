@@ -77,3 +77,14 @@ pre {
         width: auto;
     }
 }
+
+pre[class*="language"] {
+    background: #000 !important;
+}
+code[class*="language"] {
+    background: #000 !important;
+}
+
+.token {
+    background: transparent !important;
+}

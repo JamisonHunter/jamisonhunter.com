@@ -7,6 +7,12 @@
     <meta name="author" content="Jamison Hunter">
     <title>{{ title|safe }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-rust.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,7 +27,7 @@
             <ul>
                 <!-- Create new blog post.-->
                 <!-- Add link to archive. -->
-                <li><a href="/software-that-i-use-regularly">Software That I Use Regularly</a></li>
+                <li><a href="/benchmarking-programming-languages-with-math">Benchmarking Programming Languages With Math</a></li>
             </ul>
         </nav>
         <article>{{ text|safe }}</article>

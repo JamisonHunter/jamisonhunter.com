@@ -7,7 +7,7 @@ def parse_markdown(file_path):
         text = f.read()
         first_line = text.split('\n', 1)[0]
         title = first_line.lstrip('# ').strip()
-    html_content = markdown.markdown(text)
+    html_content = markdown.markdown(text, extensions=['fenced_code', 'codehilite'])
     return html_content, title
 
 def html_to_description(html, max_chars=160):
@@ -34,10 +34,10 @@ def index():
     except Exception as e:
         return render_template("error.html", error=str(e))
 
-@app.route("/software-that-i-use-regularly")
-def software_that_i_use_regularly():
+@app.route("/benchmarking-programming-languages-with-math")
+def benchmarking_programming_languages_with_math():
     try:
-        html_content, title = parse_markdown('./posts/software-that-i-use-regularly.md')
+        html_content, title = parse_markdown('./posts/benchmarking-programming-languages-with-math.md')
         description = html_to_description(html_content, max_chars=160)
         return render_template('index.html', text=html_content, title=title, description=description)
     except Exception as e:

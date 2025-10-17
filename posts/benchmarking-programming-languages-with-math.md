@@ -152,7 +152,7 @@ On my system, Rust was by far the fastest to execute with C being a close second
 
 ## Execution Time
 
-The results are for the Riemann Zeta function at s equals 3 and one billion summations.
+The results are for the Riemann Zeta function at s equals three and one billion summations.
 
 - **Rust: 4.4 Seconds**
 - **C: 7.2 Seconds**
